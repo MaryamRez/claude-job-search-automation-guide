@@ -56,7 +56,7 @@ Built with modern CSS features including:
 
 Follow for more AI tools & automation strategies:
 - [LinkedIn](https://www.linkedin.com/in/maryamrezapoor/)
-- [YouTube](https://www.youtube.com/@maryamrezapoor)
+- [YouTube](https://www.youtube.com/@BuildwithMaryam)
 
 ## 📄 License
 
