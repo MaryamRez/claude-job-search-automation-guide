@@ -1,0 +1,1174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude Cowork Job Search - Step by Step Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=SF+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #5B8CFF;
+            --primary-light: #4F7CFF;
+            --secondary: #A855F7;
+            --accent: #A3FF12;
+            --success: #84CC16;
+            --warning: #FF9500;
+            --error: #FF3B30;
+            --cyan: #00D4FF;
+            --pink: #FF69B4;
+            --purple: #8B5CF6;
+            --dark: #0A0A0A;
+            --gray-900: #0F172A;
+            --gray-800: #1E293B;
+            --gray-700: #334155;
+            --gray-600: #475569;
+            --gray-500: #64748B;
+            --gray-400: #94A3B8;
+            --gray-300: #CBD5E1;
+            --gray-200: #E2E8F0;
+            --gray-100: #F1F5F9;
+            --gray-50: #F8FAFC;
+            --white: #FFFFFF;
+            --surface: rgba(91, 140, 255, 0.08);
+            --surface-hover: rgba(91, 140, 255, 0.12);
+            --border: rgba(91, 140, 255, 0.2);
+            --border-light: rgba(91, 140, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 25%, #0F172A 75%, #000000 100%);
+            color: #F8FAFC;
+            min-height: 100vh;
+            line-height: 1.6;
+            font-weight: 400;
+            overflow-x: hidden;
+        }
+
+        .grain {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 6rem 0 4rem;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 400px;
+            background: radial-gradient(ellipse, rgba(91, 140, 255, 0.25) 0%, rgba(0, 212, 255, 0.15) 40%, transparent 70%);
+            filter: blur(80px);
+            z-index: -1;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #FFFFFF 0%, #5B8CFF 30%, #00D4FF 60%, #A855F7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: var(--gray-400);
+            font-weight: 400;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        /* Hero Social Section */
+        .hero-social {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .hero-social-intro {
+            font-size: 0.85rem;
+            color: var(--gray-500);
+            margin-bottom: 0.75rem;
+        }
+
+        .author-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .author-link:hover {
+            color: var(--cyan);
+        }
+
+        .hero-social-text {
+            font-size: 0.9rem;
+            color: var(--gray-300);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+
+        .hero-social-links {
+            display: flex;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+
+        .hero-social-link {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.5rem 1rem;
+            background: rgba(91, 140, 255, 0.1);
+            border: 1px solid rgba(91, 140, 255, 0.3);
+            border-radius: 8px;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-social-link:hover {
+            background: rgba(91, 140, 255, 0.2);
+            border-color: var(--primary);
+            color: var(--cyan);
+            transform: translateY(-1px);
+        }
+
+        /* Requirements Grid */
+        .requirements-section {
+            margin: 4rem 0;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--white);
+        }
+
+        .requirements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .requirement-card {
+            background: var(--surface);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .requirement-card:hover {
+            background: var(--surface-hover);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .requirement-card h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--white);
+        }
+
+        .requirement-card p {
+            color: var(--gray-400);
+            font-size: 0.9rem;
+            font-weight: 400;
+        }
+
+        /* Critical Notice */
+        .critical-notice {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(239, 68, 68, 0.05) 100%);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .critical-notice strong {
+            color: #FCA5A5;
+            font-weight: 600;
+        }
+
+        /* Step Cards */
+        .step-card {
+            background: var(--surface);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            margin-bottom: 2rem;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .step-card:hover {
+            background: var(--surface-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+        }
+
+        .step-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--cyan) 50%, var(--secondary) 100%);
+            padding: 2rem;
+            position: relative;
+        }
+
+        .step-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+        }
+
+        .step-number {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .step-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .step-subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            font-weight: 400;
+        }
+
+        .step-content {
+            padding: 2.5rem;
+        }
+
+        .substep {
+            margin-bottom: 2.5rem;
+        }
+
+        .substep h4 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+
+        .substep ul, .substep ol {
+            margin: 1rem 0 1rem 1.5rem;
+        }
+
+        .substep li {
+            margin-bottom: 0.5rem;
+            color: var(--gray-300);
+        }
+
+        .substep p {
+            color: var(--gray-300);
+            line-height: 1.7;
+        }
+
+        /* Code blocks */
+        .prompt-box {
+            background: var(--gray-900);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            font-family: 'SF Mono', 'Monaco', monospace;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            overflow-x: auto;
+            position: relative;
+        }
+
+        .prompt-box::before {
+            content: 'Prompt';
+            position: absolute;
+            top: -10px;
+            left: 16px;
+            background: var(--gray-800);
+            color: var(--gray-400);
+            padding: 0.25rem 0.75rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        code {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-family: 'SF Mono', 'Monaco', monospace;
+            font-size: 0.85rem;
+        }
+
+        /* Info boxes */
+        .info-box {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .info-box strong {
+            color: #93C5FD;
+            font-weight: 600;
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(245, 158, 11, 0.05) 100%);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+        }
+
+        .warning-box strong {
+            color: #FCD34D;
+            font-weight: 600;
+        }
+
+        /* Help sections */
+        .help-section {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--success) 100%);
+            border-radius: 16px;
+            padding: 2.5rem;
+            text-align: center;
+            margin: 2rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .help-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+            animation: shimmer 4s ease-in-out infinite;
+        }
+
+        .help-section h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .help-section p {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            opacity: 0.95;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .help-section.career-strategy {
+            background: linear-gradient(135deg, var(--pink) 0%, var(--secondary) 50%, var(--purple) 100%);
+        }
+
+        .help-section.setup-help {
+            background: linear-gradient(135deg, var(--gray-700) 0%, var(--gray-600) 100%);
+        }
+
+        /* Schedule cards */
+        .schedule-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .schedule-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .schedule-card:hover {
+            background: var(--surface-hover);
+            transform: translateY(-2px);
+        }
+
+        .schedule-card.recommended {
+            border-color: var(--accent);
+            background: linear-gradient(135deg, rgba(163, 255, 18, 0.1) 0%, rgba(132, 204, 22, 0.05) 100%);
+        }
+
+        .schedule-card.recommended::before {
+            content: 'Recommended';
+            position: absolute;
+            top: -8px;
+            right: 12px;
+            background: var(--accent);
+            color: var(--dark);
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .schedule-time {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--white);
+        }
+
+        .schedule-desc {
+            color: var(--gray-400);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .schedule-benefit {
+            color: var(--gray-500);
+            font-size: 0.8rem;
+        }
+
+        /* Social section */
+        .social-section {
+            background: linear-gradient(135deg, var(--gray-800) 0%, var(--gray-900) 100%);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .social-section h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .social-section p {
+            color: var(--gray-400);
+            margin-bottom: 2rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 1.5rem;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: var(--surface-hover);
+            transform: translateY(-2px);
+        }
+
+        /* Advanced features */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .feature-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .feature-card:hover {
+            background: var(--surface-hover);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--white);
+        }
+
+        .feature-card ul {
+            list-style: none;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card li {
+            color: var(--gray-300);
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .feature-card li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .tech-note {
+            background: rgba(91, 140, 255, 0.1);
+            color: var(--primary);
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            border-left: 3px solid var(--cyan);
+        }
+
+        .implementation-note {
+            background: linear-gradient(135deg, rgba(163, 255, 18, 0.1) 0%, rgba(132, 204, 22, 0.05) 100%);
+            border: 1px solid rgba(163, 255, 18, 0.3);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .implementation-note h4 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .implementation-note p {
+            color: var(--gray-300);
+        }
+
+        /* Footer */
+        .footer {
+            padding: 3rem 2rem;
+            color: var(--gray-400);
+            border-top: 1px solid var(--border);
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .footer-content p {
+            font-size: 0.9rem;
+            color: var(--gray-400);
+        }
+
+        .footer-social {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .footer-social span {
+            color: var(--gray-500);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .footer-social-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: var(--surface);
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+            color: var(--gray-400);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social-link:hover {
+            background: var(--surface-hover);
+            color: var(--primary);
+            transform: translateY(-1px);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .hero-social-links {
+                flex-direction: column;
+                align-items: center;
+                gap: 0.75rem;
+            }
+
+            .hero-social-link {
+                width: 200px;
+                justify-content: center;
+            }
+
+            .requirements-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .social-links {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .schedule-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-social {
+                flex-direction: column;
+                gap: 1.5rem;
+                text-align: center;
+            }
+
+            .footer-links {
+                justify-content: center;
+            }
+        }
+
+        @keyframes shimmer {
+            0%, 100% { transform: translateX(-100%); }
+            50% { transform: translateX(100%); }
+        }
+    </style>
+</head>
+<body>
+    <div class="grain"></div>
+    
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1>Claude Cowork Job Search Automation Guide</h1>
+            <p>Transform your job search with AI-powered automation that finds, evaluates, and prepares applications while you sleep</p>
+            
+            <!-- Inline Social Section -->
+            <div class="hero-social">
+                <p class="hero-social-intro">Developed by Claude Code, Updated last on 5/24 by <a href="https://www.linkedin.com/in/maryamrezapoor/" target="_blank" class="author-link">Maryam R</a></p>
+                <div class="hero-social-text">Follow for more</div>
+                <div class="hero-social-links">
+                    <a href="https://www.linkedin.com/in/maryamrezapoor/" target="_blank" class="hero-social-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                        LinkedIn
+                    </a>
+                    <a href="https://www.youtube.com/@maryamrezapoor" target="_blank" class="hero-social-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        </svg>
+                        YouTube
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Requirements Section -->
+        <div class="requirements-section">
+            <h2 class="section-title">What You Need</h2>
+            <div class="requirements-grid">
+                <div class="requirement-card">
+                    <h4>Paid Claude Plan</h4>
+                    <p>Pro, Max, Team, or Enterprise</p>
+                </div>
+                <div class="requirement-card">
+                    <h4>Claude Desktop</h4>
+                    <p>macOS or Windows</p>
+                </div>
+                <div class="requirement-card">
+                    <h4>Cowork Enabled</h4>
+                    <p>Activated in Claude Desktop</p>
+                </div>
+                <div class="requirement-card">
+                    <h4>Data Connectors</h4>
+                    <p>Indeed + Apify installed</p>
+                </div>
+            </div>
+            
+            <div class="critical-notice">
+                <p><strong>Critical:</strong> Your computer must stay awake and Claude Desktop must be open when scheduled tasks run. If your machine sleeps, tasks will skip and run at next opportunity.</p>
+            </div>
+        </div>
+
+        <!-- Step 0: Install Connectors -->
+        <div class="step-card">
+            <div class="step-header">
+                <div class="step-number">0</div>
+                <div class="step-title">Install Connectors</div>
+                <div class="step-subtitle">Set up your data sources first</div>
+            </div>
+            <div class="step-content">
+                <div class="substep">
+                    <h4>Indeed Connector (Easy)</h4>
+                    <ol>
+                        <li>Open Claude Desktop</li>
+                        <li>Go to Settings → Integrations</li>
+                        <li>Find "Indeed" and click Install</li>
+                        <li>No signup required - it just works</li>
+                    </ol>
+                    <div class="info-box">
+                        <p><strong>What you get:</strong><br>
+                        No API key needed. Gives you live job search, salary data, company reviews.</p>
+                    </div>
+                </div>
+
+                <div class="substep">
+                    <h4>Apify Connector</h4>
+                    <ol>
+                        <li>Sign up for free at <a href="https://apify.com" target="_blank" style="color: #3B82F6;">apify.com</a></li>
+                        <li>Get your API key from Account → Settings</li>
+                        <li>In Claude Desktop: Settings → Integrations → Apify</li>
+                        <li>Enter your API key</li>
+                    </ol>
+                    <div class="info-box">
+                        <p><strong>Why Apify:</strong> Free tier gives 1000 monthly operations. Scrapes company career pages, LinkedIn company data, and other job sites Indeed doesn't cover.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 1: Create Project -->
+        <div class="step-card">
+            <div class="step-header">
+                <div class="step-number">1</div>
+                <div class="step-title">Create Your Cowork Project</div>
+                <div class="step-subtitle">Set up your automation workspace</div>
+            </div>
+            <div class="step-content">
+                <div class="substep">
+                    <h4>Create Your Cowork Project First</h4>
+                    <ol>
+                        <li>Open Claude Desktop</li>
+                        <li>Click "Cowork" tab in left sidebar</li>
+                        <li>Under "Projects", click "Create new project"</li>
+                        <li>Name it: "Job Search Automation"</li>
+                        <li>Location: Choose a folder you'll remember</li>
+                        <li>Click "Create"</li>
+                    </ol>
+                    <div class="info-box">
+                        <p><strong>Why create project first:</strong> Projects give Claude persistent memory and file access. Your job criteria and automation prompts will be saved here for daily use.</p>
+                    </div>
+                </div>
+
+                <div class="substep">
+                    <h4>First, add your resume to the project folder</h4>
+                    <ol>
+                        <li>Find your project folder (Claude shows the path when you create it)</li>
+                        <li>Drop your resume file into this folder</li>
+                        <li>Back in Claude, ask: "Can you access the resume in the project folder? If yes, return name"</li>
+                    </ol>
+                    <div class="info-box">
+                        <p><strong>File Format Options:</strong><br>
+                        <strong>PDF:</strong> Best for formatting preservation, works perfectly with Claude<br>
+                        <strong>Word (.docx):</strong> Also works well, Claude reads all text content<br>
+                        <strong>Text (.txt):</strong> Simplest, fastest processing</p>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <p><strong>Resume-Based Benefits:</strong><br>
+                    Instead of answering 15+ questions about your preferences, Claude reads your resume and asks only 5-7 targeted questions about criteria that aren't obvious from your background. Much faster setup.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 2: Define Criteria -->
+        <div class="step-card">
+            <div class="step-header">
+                <div class="step-number">2</div>
+                <div class="step-title">Define Your Job Criteria</div>
+                <div class="step-subtitle">Let Claude create your personalized criteria</div>
+            </div>
+            <div class="step-content">
+                <div class="substep">
+                    <h4>In your same "Job Search Automation" project, copy this prompt:</h4>
+                    <div class="prompt-box">I want to create detailed job search criteria. Please:
+
+1. Read my resume from the project folder
+2. Ask me 5-7 targeted questions about preferences not clear from my resume (salary range, location preferences, company size, industry focus, etc.)
+3. Create a comprehensive job criteria document covering:
+   - Target roles and seniority levels
+   - Compensation expectations
+   - Location/remote preferences  
+   - Industry and company size preferences
+   - Must-have vs nice-to-have skills
+   - Deal-breakers
+   - Cultural fit factors
+
+4. Save the result as "job-criteria.md" in this project folder
+
+Keep questions concise and avoid asking about things obvious from my background.</div>
+                    <div class="info-box">
+                        <p><strong>Why this approach:</strong> Claude analyzes your experience and only asks about non-obvious preferences, making the setup much faster than traditional questionnaires.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 3: Create Scoring System -->
+        <div class="step-card">
+            <div class="step-header">
+                <div class="step-number">3</div>
+                <div class="step-title">Build Your Scoring Rubric</div>
+                <div class="step-subtitle">Create weighted evaluation framework</div>
+            </div>
+            <div class="step-content">
+                <div class="substep">
+                    <h4>Copy this prompt in your "Job Search Automation" project:</h4>
+                    <div class="prompt-box">Based on the job criteria we just created, please build a scoring rubric that:
+
+1. Reviews the job-criteria.md file 
+2. Creates weighted scoring categories (compensation, growth, culture fit, technical match, etc.)
+3. Defines 1-10 scoring for each category with specific criteria
+4. Shows how to calculate final scores
+5. Includes deal-breaker flags that auto-reject regardless of score
+
+Save as "scoring-rubric.md" in this project folder.
+
+Make it detailed enough that the scoring is consistent and objective.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 4: Build Automation -->
+        <div class="step-card">
+            <div class="step-header">
+                <div class="step-number">4</div>
+                <div class="step-title">Create the Automation Prompt</div>
+                <div class="step-subtitle">Build your daily job search workflow</div>
+            </div>
+            <div class="step-content">
+                <div class="substep">
+                    <h4>In your "Job Search Automation" project, use this automation prompt:</h4>
+                    <div class="prompt-box">Please run my daily job search automation:
+
+1. Read job-criteria.md and scoring-rubric.md from this project folder
+2. Search for new jobs using Indeed connector based on my criteria
+3. For each job found:
+   - Extract key details (role, company, salary, requirements, etc.)
+   - Research the company using available data
+   - Score against my rubric (1-10 scale)
+   - Flag any deal-breakers
+4. Create ranked shortlist of top opportunities (score 7+)
+5. For top 3 jobs, draft personalized cover letter outlines using my resume
+6. Save results as "daily-results-[DATE].md" in this project
+
+Focus on quality over quantity. I'd rather see 5 great matches than 50 mediocre ones.</div>
+                    
+                    <div class="warning-box">
+                        <p><strong>Test First:</strong> Run this prompt manually in a regular Cowork session before scheduling. Adjust until you're happy with results.</p>
+                    </div>
+                </div>
+
+                <div class="help-section setup-help">
+                    <h3>Need Help with Technical Setup?</h3>
+                    <p>Get personalized help configuring your automation, troubleshooting connectors, or optimizing your prompts</p>
+                    <a href="https://cal.com/jeebee/technical-setup" class="cta-button" target="_blank">Get Setup Support</a>
+                </div>
+
+                <div class="info-box">
+                    <p><strong>Token Optimization:</strong> These prompts are designed to be concise and token-efficient. This reduces costs and speeds up daily automation runs while maintaining full functionality.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 5: Schedule Automation -->
+        <div class="step-card">
+            <div class="step-header">
+                <div class="step-number">5</div>
+                <div class="step-title">Schedule Daily Automation</div>
+                <div class="step-subtitle">Set up recurring job search</div>
+            </div>
+            <div class="step-content">
+                <div class="substep">
+                    <h4>Create Scheduled Task:</h4>
+                    <ol>
+                        <li>Stay in your "Job Search Automation" project</li>
+                        <li>Type <code>/schedule</code> or click "Scheduled" in sidebar</li>
+                        <li>Click "Create new scheduled task"</li>
+                        <li>Paste your tested prompt from Step 4</li>
+                        <li>Set schedule (see recommendations below)</li>
+                    </ol>
+                    <div class="info-box">
+                        <p><strong>Important:</strong> Creating the scheduled task within your project ensures it has access to your job criteria and scoring rubric files.</p>
+                    </div>
+                </div>
+
+                <div class="substep">
+                    <h4>Choose Your Schedule:</h4>
+                    <div class="schedule-grid">
+                        <div class="schedule-card recommended">
+                            <div class="schedule-time">7:00 AM Weekdays</div>
+                            <div class="schedule-desc">Most common choice</div>
+                            <div class="schedule-benefit">Results ready before work starts</div>
+                        </div>
+                        <div class="schedule-card">
+                            <div class="schedule-time">Sunday 8:00 PM</div>
+                            <div class="schedule-desc">Casual job seeker</div>
+                            <div class="schedule-benefit">Weekly batch, less overwhelming</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Step 6: Daily Workflow -->
+        <div class="step-card">
+            <div class="step-header">
+                <div class="step-number">6</div>
+                <div class="step-title">Your Daily Workflow</div>
+                <div class="step-subtitle">How to process your automated results</div>
+            </div>
+            <div class="step-content">
+                <div class="substep">
+                    <h4>Every Morning (or weekly):</h4>
+                    <ol>
+                        <li>Check your project folder for new daily-results file</li>
+                        <li>Review the ranked job list (focus on scores 7+)</li>
+                        <li>Use the provided cover letter outlines for top matches</li>
+                        <li>Apply to 2-3 best opportunities that day</li>
+                        <li>Update your criteria if you notice patterns in what you like/dislike</li>
+                    </ol>
+                </div>
+
+                <div class="info-box">
+                    <p><strong>The Real Advantage:</strong> You spend energy on relationships and tailoring applications, not searching. Most people waste time scrolling - you focus on the right opportunities.</p>
+                </div>
+
+                <div class="help-section career-strategy">
+                    <h3>Ready to Level Up Your Tech Career Strategy?</h3>
+                    <p>Beyond automation - get strategic guidance on positioning, negotiation, and career moves that actually matter</p>
+                    <a href="https://cal.com/jeebee/career-strategy" class="cta-button" target="_blank">Book Career Strategy Session</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Advanced Features Section -->
+        <div class="requirements-section">
+            <h2 class="section-title">Further Elevate Your Job Search Experience</h2>
+            <p style="text-align: center; color: var(--gray-400); margin-bottom: 3rem;">Advanced features to maximize your automated job search effectiveness</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Mobile Notifications</h3>
+                    <ul>
+                        <li>Get shortlist sent as text message to your phone</li>
+                        <li>Slack/Discord notifications with job summaries</li>
+                        <li>Email with formatted job cards and quick apply links</li>
+                    </ul>
+                    <div class="tech-note">Uses: Zapier connector + notification services</div>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Networking Opportunity Discovery</h3>
+                    <ul>
+                        <li>Find mutual connections at target companies</li>
+                        <li>Identify alumni from your school/previous companies</li>
+                        <li>Suggest warm introduction paths through your network</li>
+                    </ul>
+                    <div class="tech-note">Uses: LinkedIn connector + contact analysis</div>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Interview Prep Automation</h3>
+                    <ul>
+                        <li>Generate company-specific interview questions</li>
+                        <li>Create talking points about company challenges</li>
+                        <li>Prepare STAR method examples for role requirements</li>
+                    </ul>
+                    <div class="tech-note">Uses: Company research + role analysis prompts</div>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Application Tracking Dashboard</h3>
+                    <ul>
+                        <li>Track application status and response rates</li>
+                        <li>Analyze which criteria lead to interviews</li>
+                        <li>Optimize scoring rubric based on outcomes</li>
+                    </ul>
+                    <div class="tech-note">Uses: Spreadsheet connector + data analysis</div>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Follow-up Automation</h3>
+                    <ul>
+                        <li>Schedule reminder to follow up after applications</li>
+                        <li>Generate personalized follow-up email templates</li>
+                        <li>Track optimal timing for follow-up messages</li>
+                    </ul>
+                    <div class="tech-note">Uses: Calendar connector + email templates</div>
+                </div>
+            </div>
+
+            <div class="implementation-note">
+                <h4>Implementation Tip:</h4>
+                <p>Start with the basic automation first, then gradually add these advanced features one at a time. Each can be built as a separate scheduled task or integrated into your main workflow.</p>
+            </div>
+        </div>
+
+        <!-- Troubleshooting -->
+        <div class="step-card">
+            <div class="step-header">
+                <div class="step-number">!</div>
+                <div class="step-title">Troubleshooting</div>
+                <div class="step-subtitle">Common issues and solutions</div>
+            </div>
+            <div class="step-content">
+                <div class="substep">
+                    <h4>Connectors Not Working</h4>
+                    <ul>
+                        <li>Fully quit and reopen Claude Desktop (don't just close)</li>
+                        <li>Check Settings → Integrations for status</li>
+                        <li>For Apify: verify your API key has available credits</li>
+                        <li>Test connectors manually before scheduling</li>
+                    </ul>
+                </div>
+
+                <div class="substep">
+                    <h4>Scheduled Tasks Not Running</h4>
+                    <ul>
+                        <li>Computer must stay awake during scheduled time</li>
+                        <li>Claude Desktop must remain open</li>
+                        <li>Check if you have sufficient token credits</li>
+                        <li>Review task history for error messages</li>
+                    </ul>
+                </div>
+
+                <div class="substep">
+                    <h4>Poor Results</h4>
+                    <ul>
+                        <li>Refine your job criteria to be more specific</li>
+                        <li>Adjust scoring rubric weights</li>
+                        <li>Add more deal-breakers to filter out irrelevant jobs</li>
+                        <li>Test with different search terms</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="footer-content">
+            <p>Built to visualize the Claude Cowork job search automation guide</p>
+        </div>
+    </div>
+</body>
+</html>
